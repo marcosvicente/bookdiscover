@@ -1,5 +1,5 @@
 {%extends "base.html"%}
-{%block angularNgApp%}ng-app="test"{%endblock %}
+{%block angularNgApp%}ng-app="post"{%endblock %}
 {%block title %}{{request.user}}{% endblock%}
 {% load staticfiles %}
 {% block css%}
@@ -10,6 +10,7 @@
 {%block content%}
     {%include 'menu.html'%}    
     {%include 'slide-show.html'%}
+    {% include 'post.html'%}
 {%endblock %}
 {%block js%}
 
@@ -21,11 +22,4 @@
         $(document).foundation();
     </script>
        
-    <script>
-     angular.module("test", []);
-     angular.module("test").controller("testcontroller", function ($scope){
-        $scope.message = "Hello Word";
-     });
-
-    </script>
- {%endblock%}
+     {%endblock%}
