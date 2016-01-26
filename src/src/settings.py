@@ -61,6 +61,8 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django.middleware.security.SecurityMiddleware',
+
+
     'account_manager.middleware.AccountManagerMiddleware',
 )
 
@@ -98,9 +100,9 @@ DATABASES = {
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.8/topics/i18n/
-
+LANGUAGES = 'pt-BR'
 LANGUAGE_CODE = 'pt-br'
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'America/Sao_Paulo'
 USE_I18N = True
 USE_L10N = True
 USE_TZ = True
@@ -121,7 +123,16 @@ ALLOWED_HOSTS = ['*']
 # registration reduz
 REGISTRATION_AUTO_LOGIN = True
 ACCOUNT_ACTIVATION_DAYS = 7
+SEND_ACTIVATION_EMAIL = True
+REGISTRATION_AUTO_LOGIN = False
 
+
+#login
+LOGIN_REDIRECT_URL = '/'
+USERNAME_FIELD = 'email'
+REQUIRED_FIELDS = ['username']
+#email
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 #email
 EMAIL_HOST='localhost'
 EMAIL_PORT=1023

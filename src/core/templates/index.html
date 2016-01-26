@@ -1,6 +1,32 @@
 {%extends "base.html"%}
-{%block title %}a{% endblock%}
+{%block angularNgApp%}ng-app="test"{%endblock %}
+{%block title %}{{request.user}}{% endblock%}
+{% load staticfiles %}
+{% block css%}
+<link rel="stylesheet" href="{%static 'css/foundation.min.css'%}">
+<link rel="stylesheet" href="{%static 'css/app.css'%}">
+    {%endblock%}
+
 {%block content%}
-    {{form}}
-    <input type="submit" value="entrar">
+    {%include 'menu.html'%}    
+    {%include 'slide-show.html'%}
+    {% include 'book.html' %}
 {%endblock %}
+{%block js%}
+
+    <script src="{%static 'js/vendor/jquery.js'%}"></script>
+    <script src="{%static 'js/foundation.min.js'%}"></script>
+    <script src="{%static 'js/angular/angular.min.js'%}"></script>
+
+    <script>
+        $(document).foundation();
+    </script>
+       
+    <script>
+     angular.module("test", []);
+     angular.module("test").controller("testcontroller", function ($scope){
+        $scope.message = "Hello Word";
+     });
+
+    </script>
+ {%endblock%}
