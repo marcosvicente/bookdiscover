@@ -3,6 +3,8 @@ from django.views.generic import ListView
 
 from book.models import PostBook
 
-def IndexListView(TemplateView):
+class IndexListView(ListView):
+    model = PostBook
     template_name = "index.html"
+
 
