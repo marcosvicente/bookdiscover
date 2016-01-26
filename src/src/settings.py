@@ -38,7 +38,7 @@ INSTALLED_APPS = (
 
     #my apss
     'core',
-
+    'book',
     #outher apps
 
     'registration',

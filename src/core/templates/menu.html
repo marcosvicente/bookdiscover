@@ -1,0 +1,29 @@
+{% load staticfiles %}
+<nav class="top-bar" data-topbar role="navigation">
+    <ul class="title-area">
+        <li class="name">
+            <a href="#">
+            
+                <h2><img src="{%static 'img/icons/open161.png'%} " alt="">   Book Discover</h2>
+
+            </a>
+        </li>
+        <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+    </ul>
+    <section class="top-bar-section">
+        <ul class="right" id="menu-cor">
+            {%if request.user.is_authenticated %}
+            <li>
+                <a href="{%url 'auth_logout'%}">Sair</a>
+            </li>
+            {%else%}
+            <li>
+                <a href="{% url 'auth_login'%}">Login</a>
+            </li>
+            <li>
+                <a href="{% url 'registration_register'%}">Registro</a>
+            </li>
+            {%endif%}
+        </ul>
+    </section>
+</nav>
