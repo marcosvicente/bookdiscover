@@ -23,4 +23,5 @@ class PostBook(models.Model):
 class CometaryBook(models.Model):
     username = models.ForeignKey(User)
     text = models.TextField()
-     
+    
+    created_at = models.DateTimeField(auto_now_add=True)
