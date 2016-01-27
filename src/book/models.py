@@ -1,7 +1,7 @@
 from __future__ import unicode_literals
 
 from django.db import models
-
+from django.contrib.auth.models import User
 # Create your models here.
 
 class PostBook(models.Model):
@@ -19,3 +19,8 @@ class PostBook(models.Model):
     def __unicode__(self):
         return self.name
 
+
+class CometaryBook(models.Model):
+    username = models.ForeignKey(User)
+    text = models.TextField()
+     

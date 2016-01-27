@@ -12,3 +12,5 @@ class BookDetailView(DetailView):
     model = PostBook
     template_name ="book-detail.html"
     slug_field = 'slug'
+
+ 

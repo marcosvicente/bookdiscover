@@ -10,8 +10,7 @@ from core.views import IndexListView
 
 
 urlpatterns = [ 
-    url(r'^$', IndexListView.as_view(), name='index'),
-       
+    url(r'^$', IndexListView.as_view(), name='index'),       
     url(r'^admin/', include(admin.site.urls)),
     url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
     url(r'^accounts/', include('registration.backends.default.urls')),
