@@ -2,7 +2,10 @@
 
     background: #d1d2d1;
 }
-
+.top-bar.expanded{
+ 
+   background: #d1d2d1;
+}
 h2{
     color : #343434;
 }

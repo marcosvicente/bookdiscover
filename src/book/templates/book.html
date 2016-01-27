@@ -1,13 +1,15 @@
 {% extends 'base.html'%}
 
-{%block angularNgApp%}ng-app="test"{%endblock %}
+{%block angularNgApp%}{%endblock %}
 
-{%block title %}{{request.user}}{% endblock%}
+{%block title %} 
+{{request.user}} 
+{% endblock%}
 
 {% load staticfiles %}
 {% block css%}
 
-<link rel="stylesheet" href="{%static 'css/foundation.min.css'%}">
+<link rel="stylesheet" href=" {%static 'css/foundation.min.css'%} ">
 
 <link rel="stylesheet" href="{%static 'css/app.css'%}">
 

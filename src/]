@@ -1,0 +1,30 @@
+{% extends 'base.html'%}
+{% load staticfiles %}
+{% block css%}
+    <link rel="stylesheet" href=" {%static 'css/foundation.min.css'%} ">
+
+    <link rel="stylesheet" href="{%static 'css/app.css'%}">
+{%endblock%}
+
+{% block content%}
+    
+{% include 'menu.html'%}
+
+<div class="row">
+    <div class="large-10 columns">
+        <h1>{{object.name}}</h1>
+    {{object.description|linebreaks|escape}}
+    </div>
+</div>
+{% endblock %}
+
+{%block js%}
+    <script src="{%static 'js/vendor/jquery.js'%}"></script>
+    <script src="{%static 'js/foundation.min.js'%}"></script>
+    <script src="{%static 'js/angular/angular.min.js'%}"></script>
+
+    <script>
+        $(document).foundation();
+    </script>
+
+{%endblock%}

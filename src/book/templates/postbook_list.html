@@ -3,11 +3,13 @@
 <div class="row">
     {% for book in object_list %}
     <div class="small-12 medium-6 large-4 columns">
+        <a href="{{book.slug}}">
         <div class="panel">
             <img src="{{book.picture}}" alt="">
-            <h2> {{book.name}}</h2>
+            <h2>{{book.name}}</h2>
 
         </div>
+        </a>
     </div>
     {% endfor%}
 </div>
