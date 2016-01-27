@@ -1,8 +1,8 @@
 {% extends "registration/registration_base.html" %}
 {% load i18n %}
 
-{% block title %}{% trans "Logged out" %}{% endblock %}
+{% block title %} Logged out {% endblock %}
 
 {% block content %}
-<p>{% trans "Successfully logged out" %}.</p>
+<a href="{%url 'index' %}" class="text-center"><h2>Retornar para o site para o site.</h2> </a>
 {% endblock %}

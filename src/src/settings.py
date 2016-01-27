@@ -40,14 +40,16 @@ INSTALLED_APPS = (
     'core',
     'book',
     #outher apps
-
+   
+    
+    #registration 
     'registration',
 
     #django rest framework
     'rest_framework',
     'rest_framework.authtoken',
-
-
+        
+    
        
     )
 SITE_ID = 1
@@ -108,7 +110,6 @@ USE_L10N = True
 USE_TZ = True
 
 if DEBUG == False:
-
     # Parse database configuration from $DATABASE_URL
     DATABASES['default'] = dj_database_url.config()
 
@@ -167,4 +168,5 @@ REST_FRAMEWORK = {
             
     ]
 }
+
 

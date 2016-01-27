@@ -10,7 +10,7 @@ class PostBook(models.Model):
     year = models.IntegerField()
     whiter = models.CharField(max_length=100)
     description = models.TextField()
-    picture = models.ImageField(upload_to='media/post-book' )
+    picture = models.FileField(upload_to='media/post-book' )
    
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)

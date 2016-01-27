@@ -5,6 +5,35 @@
  
    background: #d1d2d1;
 }
+.button{
+    background:#ffa414;
+}
+.button:hover{
+    background:#ff8514;
+}
+a{
+color:#343434;
+}
+.errorlist{
+    background: #af1e0e;
+    margin: 1em;
+}
+.errorlist:hover{
+
+    background:#711e0e;
+
+}
+.errorlist li{
+    padding: 1em;
+    list-style:none;
+    color: #fff;
+}
+.helptext{
+    display:none;
+}
+a:hover{
+color:#434343;
+}
 h2{
     color : #343434;
 }

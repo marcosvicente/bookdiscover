@@ -1,18 +1,51 @@
 {% extends "registration/registration_base.html" %}
 {% load i18n %}
 
-{% block title %}{% trans "Log in" %}{% endblock %}
+{% load staticfiles %}
+{% block title %}Login{% endblock %}
 
 {% block content %}
-<form method="post" action="">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <input type="submit" value="{% trans 'Log in' %}" />
-    <input type="hidden" name="next" value="{{ next }}" />
-</form>
+<h2 class="text-center"> Faça seu login aqui!</h2>
 
-<p>{% trans "Forgot your password?" %} <a href="{% url 'auth_password_reset' %}">{% trans "Reset it" %}</a>.</p>
-<p>{% trans "Not a member?" %} <a href="{% url 'registration_register' %}">{% trans "Register" %}</a>.</p>
+<div class="panel">
+<div class="row">
+        <div class="small-12 medium-8 large-7  large-centered columns">
+            <form method="post" action="">
+                {% csrf_token %}
+                {{ form }}
+                <input type="submit"  class="button radius" value="{% trans 'Log in' %}" />
+                <input type="hidden" name="next"  value="{{ next }}" />
+            </form>
+        </div>
+    </div>
+</div>
+<div class="panel"> 
+    <div class="row">
+
+        <div class=" large-6 large-centered columns">
+            <h3 class="text-center">
+                <a href="{% url 'auth_password_reset' %}">
+                    Esqueceu sua senha? 
+                </a>
+            </h2>
+        </div>
+    </div>
+
+</div>
+<div class="panel">  
+<div class="row">
+     
+        <div class=" large-6 large-centered columns">
+            <h3 class="text-center">
+                <a href="{% url 'registration_register' %}" >
+                    Crie sua conta!
+                </a>
+            </h3>
+        </div>
+    </div>
+
+</div>
+{% include "rodape.html"%}
 {% endblock %}
 
 

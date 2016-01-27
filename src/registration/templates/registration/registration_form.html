@@ -1,14 +1,41 @@
 {% extends "registration/registration_base.html" %}
 {% load i18n %}
-
 {% block title %}{% trans "Register for an account" %}{% endblock %}
 
 {% block content %}
-<form method="post" action="">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <input type="submit" value="{% trans 'Submit' %}" />
-</form>
+<h1 class="text-center">Registre sua conta</h1>
+<div class="panel" >
+    <section class="row">
+        <div class="small-12  medium-8 large-6 large-centered columns">
+            <form method="post" action="">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <div class="row">
+                    <div class="small-12 large-4 large-centered columns ">
+                        <input type="submit" value="{% trans 'Submit' %}" class="button expand" />
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+</div>
+
+
+<section class="panel">
+    <div class="row">
+    <div class="small-12 large-6 large-centered columns">
+
+        <h2 class="text-center">Problemas em se registrar</h2>
+        <p>Problema 1</p>
+        <p>Problema 2</p>
+        <p>Problema 3</p>
+        <p>Problema 4</p>
+        <p>Problema 5</p>
+        <p>Problema 6</p>
+    </div>
+</div>
+</section>
+{% include 'rodape.html'%}
 {% endblock %}
 
 
