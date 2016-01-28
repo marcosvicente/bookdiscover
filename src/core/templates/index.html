@@ -1,12 +1,14 @@
 {%extends "base.html"%}
 {%block angularNgApp%}ng-app="post"{%endblock %}
+
 {%block title %}{{request.user}}{% endblock%}
+
 {% load staticfiles %}
 {% block css%}
-<link rel="stylesheet" href="{%static 'css/foundation.min.css'%}">
-<link rel="stylesheet" href="{%static 'css/app.css'%}">
-<link rel="stylesheet" href="{% static 'css/normalize.css'%}">
-<script src="{%static 'js/modernizr.js'%}"></script>
+    <link rel="stylesheet" href="{%static 'css/foundation.min.css'%}">
+    <link rel="stylesheet" href="{%static 'css/app.css'%}">
+    <link rel="stylesheet" href="{% static 'css/normalize.css'%}">
+    <script src="{%static 'js/modernizr.js'%}"></script>
 {%endblock%}
 
 {%block content%}
@@ -21,12 +23,10 @@
 {%endblock %}
 
 {%block js%}
-
-<script src="{%static 'js/vendor/jquery.js'%}"></script>
-<script src="{%static 'js/foundation.min.js'%}"></script>
-<script src="{%static 'js/vendor/fastclick.js'%}"></script>
-<script>
-    $(document).foundation();
-</script>
-
+    <script src="{%static 'js/vendor/jquery.js'%}"></script>
+    <script src="{%static 'js/foundation.min.js'%}"></script>
+    <script src="{%static 'js/vendor/fastclick.js'%}"></script>
+    <script>
+        $(document).foundation();
+    </script>
 {%endblock%}

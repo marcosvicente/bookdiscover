@@ -8,31 +8,30 @@
 
 {% load staticfiles %}
 {% block css%}
-
-<link rel="stylesheet" href=" {%static 'css/foundation.min.css'%} ">
-
-<link rel="stylesheet" href="{%static 'css/app.css'%}">
-
+    <link rel="stylesheet" href=" {%static 'css/foundation.min.css'%} ">
+    <link rel="stylesheet" href="{%static 'css/app.css'%}">
+    <link rel="stylesheet" href="{% static 'css/normalize.css'%}">
+    <script src="{%static 'js/modernizr.js'%}"></script>
 {%endblock%}
 
 {%block content%}
 
-    {%include 'menu.html'%}   
-
+    {% include 'menu.html'%}   
     {% include 'postbook_list.html'%}
-
-    {% include 'cometary-book.html'%}
+    
+    
 
 {%endblock %}
 
 {%block js%}
 
-<script src="{%static 'js/vendor/jquery.js'%}"></script>
-<script src="{%static 'js/foundation.min.js'%}"></script>
-<script src="{%static 'js/angular/angular.min.js'%}"></script>
+    <script src="{%static 'js/vendor/jquery.js'%}"></script>
+    <script src="{%static 'js/foundation.min.js'%}"></script>
 
-<script>
-    $(document).foundation();
-</script>
-
+    <script src="{%static 'js/vendor/fastclick.js'%}"></script>
+    <script>
+        $(document).foundation();
+    </script>
+    
+    <script src="{%static 'js/angular/angular.min.js'%}"></script>
 {%endblock%}

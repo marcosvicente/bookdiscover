@@ -5,7 +5,9 @@ from django.conf.urls.static import static
 from django.conf import settings
 
 
-from book.views import BookListView , BookDetailView
+from rest_framework import routers
+
+from book.views import BookListView , BookDetailView 
 from core.views import IndexListView
 
 
@@ -15,7 +17,14 @@ urlpatterns = [
     url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
     url(r'^accounts/', include('registration.backends.default.urls')),
     url(r'^book/$',  BookListView.as_view(), name='book'),
-    url(r'^book/(?P<slug>[-\w]+)/$', BookDetailView.as_view(), name='book-detail'), 
+    url(r'^book/(?P<slug>[-\w]+)/$', BookDetailView.as_view(), name='book-detail'),
+
+
+
+    
+
+
+
 ]
 if settings.DEBUG:
     urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
