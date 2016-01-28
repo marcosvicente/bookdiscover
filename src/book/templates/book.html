@@ -16,10 +16,34 @@
 
 {%block content%}
 
-    {% include 'menu.html'%}   
+{% include 'menu.html'%}  
+{% include 'busca-post.html'%}
     {% include 'postbook_list.html'%}
     
-    
+    {% if is_paginated %}
+    <section class="row">
+        <div class="small-12 medium-8 large-6  small-centered columns ">
+            <div class="pagination">
+                <span class="page-links">
+                    {% if page_obj.has_previous %}
+                    <a href="/book?page={{ page_obj.previous_page_number }}" class="button expand">Anterior</a>
+                    {% endif %}
+                    <div class="button expand" style="background: #d1d2d1; color: #343434">
+                    <span class="page-current" >
+                        Page {{ page_obj.number }}  de {{ page_obj.paginator.num_pages }}.
+                    </span>
+                    </div>
+                    {% if page_obj.has_next %}
+                    <a href="/book?page={{ page_obj.next_page_number }}" class="button expand">Proxima</a>
+                    {% endif %}
+                </span>
+            </div>
+        </div>
+    </section>
+    {% endif %}
+
+
+
 
 {%endblock %}
 

@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from django.views.generic import ListView 
 from django.views.generic.detail import DetailView
 from django.core.urlresolvers import reverse_lazy
@@ -6,13 +6,17 @@ from django.views.generic.edit import FormView
 from django.views.generic import TemplateView
 
 from rest_framework import viewsets
-
+from django.db.models import Q
 from .models import PostBook, CometaryBook, CometaryBookForm
 
 class BookListView(ListView):
     model = PostBook
     template_name = "book.html"
+    paginate_by = 2
+    
+        
 
+    
 class BookDetailView(DetailView):
     model = PostBook
     template_name ="book-detail.html"
