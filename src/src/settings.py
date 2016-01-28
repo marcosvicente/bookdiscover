@@ -41,7 +41,8 @@ INSTALLED_APPS = (
     'book',
     #outher apps
    
-    
+    #seacrh
+ 
     #registration 
     'registration',
 
@@ -168,5 +169,7 @@ REST_FRAMEWORK = {
             
     ]
 }
+
+#search
 
 

@@ -1,0 +1,115 @@
+{% extends 'base.html'%}
+
+{%block angularNgApp%}{%endblock %}
+
+{%block title %} 
+{{request.user}} - Categoria 
+{% endblock%}
+
+{% load staticfiles %}
+{% block css%}
+    <link rel="stylesheet" href=" {%static 'css/foundation.min.css'%} ">
+    <link rel="stylesheet" href="{%static 'css/app.css'%}">
+    <link rel="stylesheet" href="{% static 'css/normalize.css'%}">
+    <script src="{%static 'js/modernizr.js'%}"></script>
+{%endblock%}
+
+{%block content%}
+
+    {% include 'menu.html'%}   
+    <hr>
+    <div class="row" id="categoria">
+        <section class="small-12 medium-6 large-4 columns">
+            <div class="panel">
+                <h2 class="text-categoria">Aventura</h2>
+                <img src="{%static 'img/aventura.jpg'%}" alt="Categoria Aventura" />
+                <div>
+                </section>
+
+                <section class="small-12 medium-6 large-4 columns">
+                    <div class="panel">
+                        <h2 class="text-categoria" >Romance</h2>
+                        <img src="{%static 'img/romance.jpg'%}" alt="Categoria Romance" />
+                    </div>
+                </section>
+
+
+                <section class="small-12 medium-6 large-4 columns">
+                    <div class="panel">
+                        <h2 class="text-categoria">Poesia</h2>
+                        <img src="{%static 'img/poesia.jpg'%}" alt="slide 1" />
+                    </div>
+                </section>
+
+
+                <section class="small-12 medium-6 large-4 columns">
+                    <div class="panel">
+                        <h2 class="text-categoria">Ficção científica</h2>
+                        <img src="{%static 'img/cientifica.png '%}" alt="slide 1" />
+                    </div>
+                </section>
+
+                <!-- medium up-->
+
+                <section class="small-12 medium-6 large-4 columns">
+                    <div class="show-for-medium-up">
+                        <div class="panel">
+                            <h2 class="text-categoria">Terror</h2>
+                            <img src="{%static 'img/terror.jpg'%}" alt="slide 1" />
+                        </div>
+                    </div>
+                </section>
+
+
+                <section class="small-12 medium-6 large-4 columns">
+                    <div class="show-for-medium-up">
+                        <div class="panel">
+                            <h2 class="text-categoria">Fantasia</h2>
+                            <img src="{%static 'img/fantasia.jpg'%}" alt="slide 1" />
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Large up-->
+                <section class="small-12 medium-6 large-4 columns">
+                    <div class="show-for-large-up">
+                        <div class="panel">
+                            <h2 class="text-categoria">Comedia</h2>
+                            <img src="{%static 'img/comedia.jpg'%}" alt="slide 1" />
+                        </div>
+                    </div>
+                </section>
+                <section class="small-12 medium-6 large-4 columns">
+                    <div class="show-for-large-up">
+                        <div class="panel">
+                            <h2 class="text-categoria">Auto ajuda</h2>
+                            <img src="{%static 'img/ajuda.jpg'%}" alt="slide 1" />
+                        </div>
+                    </div>
+                </section>
+                <section class="small-12 medium-6 large-4 columns">
+                    <div class="show-for-large-up">
+                        <div class="panel">
+                            <h2 class="text-categoria">Romance Policial</h2>
+                            <img src="{%static 'img/romance-policial.jpg'%}" alt="slide 1" />
+                        </div>
+                    </div>
+                </section>
+            </div>
+    {% include 'rodape.html' %}
+    
+
+{%endblock %}
+
+{%block js%}
+
+    <script src="{%static 'js/vendor/jquery.js'%}"></script>
+    <script src="{%static 'js/foundation.min.js'%}"></script>
+
+    <script src="{%static 'js/vendor/fastclick.js'%}"></script>
+    <script>
+        $(document).foundation();
+    </script>
+    
+    <script src="{%static 'js/angular/angular.min.js'%}"></script>
+{%endblock%}

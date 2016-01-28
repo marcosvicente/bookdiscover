@@ -18,11 +18,7 @@ urlpatterns = [
     url(r'^accounts/', include('registration.backends.default.urls')),
     url(r'^book/$',  BookListView.as_view(), name='book'),
     url(r'^book/(?P<slug>[-\w]+)/$', BookDetailView.as_view(), name='book-detail'),
-
-
-
-    
-
+    url(r'^book/category/', include('book.urls', namespace='book')),
 
 
 ]

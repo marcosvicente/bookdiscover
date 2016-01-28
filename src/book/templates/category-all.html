@@ -1,9 +1,9 @@
 {% extends 'base.html'%}
 
-{%block angularngapp%}{%endblock %}
+{%block angularNgApp%}{%endblock %}
 
 {%block title %} 
-{{request.user}} 
+{{request.user}} - Categoria 
 {% endblock%}
 
 {% load staticfiles %}
@@ -17,8 +17,8 @@
 {%block content%}
 
     {% include 'menu.html'%}   
-    {% include 'postbook_list.html'%}
-    
+        
+    {% include 'rodape.html' %}
     
 
 {%endblock %}

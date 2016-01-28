@@ -1,9 +1,24 @@
+# _*_ coding: utf-8 _*_
+
 from __future__ import unicode_literals
 
 from django.db import models
 from django import forms
 from django.contrib.auth.models import User
-# Create your models here.
+
+CATEGORY_CHOICES = (
+    ('AVENTURA', 'Aventura'),
+    ('ROMANCE','Romance'),
+    ('POESIA','Poesia'),
+    ('FICCÃO CIENTIFICA', 'Ficcção Cientifica'),
+    ('TERROR', 'Terror'),
+    ('FANTASIA','Fantasia'),
+    ('COMEDIA', 'Comedia'),
+    ('AUTO AJUDA','Auto ajuda'),
+    ('ROMANCE', 'Romance')
+    
+)
+
 
 class PostBook(models.Model):
     name = models.CharField(max_length= 100)
@@ -12,7 +27,10 @@ class PostBook(models.Model):
     whiter = models.CharField(max_length=100)
     description = models.TextField()
     picture = models.FileField(upload_to='media/post-book' )
-   
+    category = models.CharField(
+                    max_length=100, 
+                    choices=CATEGORY_CHOICES,
+                ) 
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     
