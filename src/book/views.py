@@ -67,10 +67,10 @@ class BookListCategoryComedia(ListView):
 class BookListCategoryAutoAjuda(ListView):
     model = PostBook
     queryset = PostBook.objects.filter(category="AUTO AJUDA")
-    template_name = 'categoria-auto-ajuda.html' 
+    template_name = 'category-auto-ajuda.html' 
 
 class BookListCategoryRomancePolicial(ListView):
     model = PostBook
     queryset = PostBook.objects.filter(category="ROMANCE POLICIAL")
-    template_name = 'categoria-romance-policial.html'
+    template_name = 'category-romance-policial.html'
 

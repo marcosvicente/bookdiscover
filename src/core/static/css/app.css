@@ -1,9 +1,11 @@
-.top-bar{
-    background: #d1d2d1;
+.top-bar  {
+    background: #d1d2d1!important;
 }
-.top-bar.expanded{
- 
-   background: #d1d2d1;
+.top-bar li {
+    background: #d1d2d1!important;
+}
+.top-bar li a, .top-bar li span{
+    color: color:#343434!important;
 }
 .button{
     background:#ffa414;
